@@ -6,7 +6,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="assets/css/main.css">
 	</head>
-	<body></body>
+	<body>
+		<!-- May need to add these line to .htacess file-->
+		<!-- AddType video/mp4 mp4 m4v-->
+		<!-- AddType video/ogg ogv-->
+		<!-- AddType video/webm webm-->
+		<video src="/assets/video/podcast.ogv" controls>
+			<p>Your browser does not support video.</p>
+		</video><br>
+		<!-- May need to add these line to .htacess file-->
+		<!-- AddType audio/mp4 m4a-->
+		<!-- AddType audio/ogg ogg oga-->
+		<audio src="/assets/audio/podcast-audio.oga" controls>
+			<p>Your browser does not support audio</p>
+		</audio>
+	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="assets/js/custom.js"></script>
 </html>
