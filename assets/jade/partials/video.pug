@@ -4,5 +4,26 @@
 // AddType video/ogg ogv
 // AddType video/webm webm
 
+// features: controls, autoplay, loop, poster
+// flash fallback: Flash Media Playback Player
+
 video(src="/assets/video/podcast.ogv", controls)
-	p Your browser does not support video.
+	p Your browser does not support HTML5 video.
+
+br
+
+video#myVideo(width="480", height="300", controls, preload="none", poster="/assets/video/podcast-poster.jpg")
+	source(src="/assets/video/podcast.mp4" type="video/mp4") 
+	// ipad grabs first source only so mp4 goes first
+	source(src="/assets/video/podcast.webm" type="video/webm") 
+	// Better quality less browsers
+	source(src="/assets/video/podcast.ogv" type="video/ogg") 
+	// Lowest quality
+	track(kind="captions", src="/assets/video/podcast-captions.vtt")
+	// track captions not supported as of yet. Alternative VideoJs
+	p Your browser does not support HTML5 video
+	// or can add adobe flash player
+
+// custom video controls..every browser the same
+//div#video_controls
+	div#play_toggle.player_button Play
