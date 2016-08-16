@@ -3,5 +3,20 @@
 // AddType audio/mp4 m4a
 // AddType audio/ogg ogg oga
 
+// features: controls, autoplay, loop
+// flash fallback: Flash Media Playback Player
+// embed code builderr: VideoJS
+
+
 audio(src="/assets/audio/podcast-audio.oga" controls)
 	p Your browser does not support audio
+
+br
+
+audio(controls, preload="none" style="width:480px")
+	source(src="/assets/audio/podcast-audio.m4a" type="audio/mp4")
+	// for ipad..grabs first
+	source(src="/assets/audio/podcast-audio.oga" type="audio/ogg")
+	// lower quality..works on all browsers
+	p Your browser does not support audio
+	// or can add adobe flash player
